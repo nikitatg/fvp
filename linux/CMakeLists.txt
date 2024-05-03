@@ -47,9 +47,9 @@ set(CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} -Wl,--enable-new-dta
 target_compile_options(${PLUGIN_NAME} PRIVATE -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections)
 target_link_libraries(${PLUGIN_NAME} PRIVATE -Wl,--gc-sections)
 
-set(MDK_SDK_URL "https://sourceforge.net/projects/mdk-sdk/files/nightly/mdk-sdk-linux.tar.xz")
+set(MDK_SDK_URL "https://github.com/wang-bin/mdk-sdk/releases/download/v0.25.0/mdk-sdk-linux.tar.xz")
 if(CMAKE_SYSTEM_PROCESSOR MATCHES "[xX].*64" OR CMAKE_SYSTEM_PROCESSOR MATCHES "[aA][mM][dD]64")
-  set(MDK_SDK_URL "https://sourceforge.net/projects/mdk-sdk/files/nightly/mdk-sdk-linux-x64.tar.xz")
+  set(MDK_SDK_URL "https://github.com/wang-bin/mdk-sdk/releases/download/v0.25.0/mdk-sdk-linux-x64.tar.xz")
 endif()
 set(MDK_SDK_SAVE ${CMAKE_CURRENT_SOURCE_DIR}/mdk-sdk-linux.tar.xz)
 if(NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/mdk-sdk/lib/cmake/FindMDK.cmake)
