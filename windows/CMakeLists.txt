@@ -68,9 +68,9 @@ if(VIEW_HAS_GetGraphicsAdapter)
   target_compile_definitions(${PLUGIN_NAME} PRIVATE VIEW_HAS_GetGraphicsAdapter=1)
 endif()
 
-set(MDK_SDK_URL "https://github.com/wang-bin/mdk-sdk/releases/download/v0.25.0/mdk-sdk-windows-desktop-vs2022.7z")
+set(MDK_SDK_URL "https://github.com/wang-bin/mdk-sdk/releases/download/v0.24.0/mdk-sdk-windows-desktop-vs2022.7z")
 if(CMAKE_CXX_COMPILER_ARCHITECTURE_ID MATCHES "[xX]64") # msvc
-  set(MDK_SDK_URL "https://github.com/wang-bin/mdk-sdk/releases/download/v0.25.0/mdk-sdk-windows-desktop-vs2022-x64.7z")
+  set(MDK_SDK_URL "https://github.com/wang-bin/mdk-sdk/releases/download/v0.24.0/mdk-sdk-windows-desktop-vs2022-x64.7z")
 endif()
 set(MDK_SDK_SAVE ${CMAKE_CURRENT_SOURCE_DIR}/mdk-sdk-windows-desktop-vs2022.7z)
 if(NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/mdk-sdk/lib/cmake/FindMDK.cmake)
