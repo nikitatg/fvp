@@ -13,7 +13,7 @@ macro(fvp_setup_deps)
     endif()
   else()
   endif()
-  set(MDK_SDK_URL https://sourceforge.net/projects/mdk-sdk/files/nightly/${MDK_SDK_PKG})
+  set(MDK_SDK_URL https://github.com/wang-bin/mdk-sdk/releases/download/v0.30.1/${MDK_SDK_PKG})
   set(MDK_SDK_SAVE "${CMAKE_CURRENT_SOURCE_DIR}/${MDK_SDK_PKG}")
 
   set(DOWNLOAD_MDK_SDK OFF)
